@@ -1,0 +1,16 @@
+{
+  "model_name": "LightGBM (Optuna-tuned)",
+  "saved_on": "2026-09-02",
+  "training_period": "2015-01-18 00:00:00 to 2018-12-31 23:00:00",
+  "test_period": "2019-07-01 00:00:00 to 2020-02-29 23:00:00",
+  "test_mae_mw": 48.4,
+  "test_mape_pct": 3.81,
+  "test_rmse_mw": 63.1,
+  "improvement_vs_seasonal_naive_pct": 36.8,
+  "known_limitations": [
+    "Trained on pre-COVID data only (through Feb 2020); accuracy degrades under demand regime shifts - see the Section 16.6 stress test for the measured degradation.",
+    "Uses actual weather at the target hour as a feature, not a weather forecast. A live deployment must substitute a day-ahead weather forecast, which carries its own error - reported accuracy here is mildly optimistic relative to a true production setting.",
+    "Point forecast only, no prediction intervals. Do not present the raw output as a guaranteed bound without adding uncertainty estimation.",
+    "Requires at least 336 hours (14 days) of recent, unbroken historical demand and weather data to compute lag/rolling features for a new forecast - see warm_start_history.csv."
+  ]
+}

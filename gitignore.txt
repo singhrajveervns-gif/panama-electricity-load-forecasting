@@ -1,0 +1,23 @@
+# Raw data (large, redistribute-restricted - see data/README.md)
+data/raw/
+
+# Python environment
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
